@@ -21,7 +21,7 @@ cd UserCreactionApp
 4. Ejecuta el comando **`gradle bootRun`** para iniciar la aplicación.
 5. La API estará disponible en http://localhost:8081.
 
->Nota: Si desea probar el endpoint usando Postman puede utilizar el siguiente [archivo]()
+>Nota: Si desea probar el endpoint usando Postman puede utilizar el siguiente [archivo](createUserAPI.postman_collection.json)
 
 ## Uso
 La API expone el siguiente endpoint:
