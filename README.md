@@ -21,10 +21,12 @@ cd UserCreactionApp
 4. Ejecuta el comando **`gradle bootRun`** para iniciar la aplicación.
 5. La API estará disponible en http://localhost:8081.
 
+>Nota: Si desea probar el endpoint usando Postman puede utilizar el siguiente [archivo]()
+
 ## Uso
 La API expone el siguiente endpoint:
 
-```
+``` JSON
 POST http://localhost:8081/users
 Content-Type: application/json
 
@@ -42,11 +44,33 @@ Content-Type: application/json
 }
 
 ```
-
-## Formato de respuesta
-Todos los endpoints de la API devuelven las respuestas en formato JSON. En caso de error, la respuesta contendrá un mensaje de error con el siguiente formato:
-
+## Ejemplo de respuesta OK
+``` JSON
+{
+    "id": 1,
+    "name": "Misdely",
+    "email": "misdely@email.com",
+    "password": "Misdjhjsdh88",
+    "phones": [
+        {
+            "id": 1,
+            "number": "1234567",
+            "cityCode": "1",
+            "countryCode": "56"
+        }
+    ],
+    "created": "2023-05-12T12:25:18.8072653",
+    "modified": "2023-05-12T12:25:18.8072653",
+    "lastLogin": "2023-05-12T12:25:18.8072653",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXNkZWx5QGVtYWlsLmNvbSIsIm5hbWUiOiJNaXNkZWx5IiwiaWF0IjoxNjgzOTA4NzE4LCJleHAiOjE2ODM5MTA1MTh9.gyXcKeCjy46I7r7S4aAFuDlSXvtd3NSakxwk0fKD0cCnziKVxBt-OnOD0x6LYS9ThNzziefPnkbN3GYp7Sf9QQ",
+    "active": true
+}
 ```
+
+## Formato de respuesta Error
+El endpoint de la API devuelve las respuestas en formato JSON. En caso de error, la respuesta contendrá un mensaje de error con el siguiente formato:
+
+``` JSON
 { "mensaje": "La contraseña es obligatoria" }
 { "mensaje": "El correo debe tener un formato válido" }
 { "mensaje": "El correo ya está registrado" }

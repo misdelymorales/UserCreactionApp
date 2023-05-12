@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "298647c0-7581-4fde-9e03-7ec9611f1807",
+		"name": "createUserAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23775942"
+	},
+	"item": [
+		{
+			"name": "crear usuario",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Misdely\",\r\n  \"email\": \"misdely@email.com\",\r\n  \"password\": \"Misdjhjsdh88\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"1234567\",\r\n      \"cityCode\": \"1\",\r\n      \"countryCode\": \"56\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
