@@ -63,7 +63,7 @@ public class UserControllerTest {
         ResponseEntity<?> response = userController.createUser(userDto);
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
-        assertEquals("{\"mensaje\": \"El correo ya registrado\"}", response.getBody());
+        assertEquals("El correo ya está registrado", response.getBody());
     }
 }
 
