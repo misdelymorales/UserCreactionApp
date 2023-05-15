@@ -1,4 +1,5 @@
 ## Nombre del Proyecto 
+
 UserCreactionApp
 ## Descripción
 Este proyecto es una aplicación que expone una API RESTful que permite la creación de usuarios y su almacenamiento en una base de datos en memoria. Los usuarios pueden registrarse proporcionando su nombre, correo electrónico, contraseña y teléfono de contacto. La API acepta y retorna JSON, así como proporcionar mensajes de error.
@@ -21,7 +22,7 @@ cd UserCreactionApp
 4. Ejecuta el comando **`gradle bootRun`** para iniciar la aplicación.
 5. La API estará disponible en http://localhost:8081.
 
->Nota: Si desea probar el endpoint usando Postman puede utilizar el siguiente [archivo](createUserAPI.postman_collection.json)
+>Nota: Si desea probar el endpoint usando Postman puedes importar la siguiente [colección](createUserAPI.postman_collection.json)
 
 ## Uso
 La API expone el siguiente endpoint:
@@ -79,7 +80,7 @@ El endpoint de la API devuelve las respuestas en formato JSON. En caso de error,
 ...
 ```
 
-## Pruebas Unitarias
+
 
 ## Diagrama de Solución
 

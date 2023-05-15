@@ -1,7 +1,6 @@
 package com.nttdata.service;
 
 import com.nttdata.models.User;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Service;
@@ -25,18 +24,5 @@ public class TokenService {
                 .setExpiration(java.sql.Timestamp.valueOf(currentTime.plusMinutes(30)))
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
-    }
-
-    public boolean validateToken(String token) {
-        try {
-            Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public Claims extractClaims(String token) {
-        return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
     }
 }

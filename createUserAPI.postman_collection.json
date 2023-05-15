@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"Misdely\",\r\n  \"email\": \"misdely@email.com\",\r\n  \"password\": \"Misdjhjsdh88\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"1234567\",\r\n      \"cityCode\": \"1\",\r\n      \"countryCode\": \"56\"\r\n    }\r\n  ]\r\n}",
+					"raw": "{\r\n  \"name\": \"Misdely Morales\",\r\n  \"email\": \"misdely@email.com\",\r\n  \"password\": \"Misdjhjsdh88\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"1234567\",\r\n      \"cityCode\": \"1\",\r\n      \"countryCode\": \"56\"\r\n    }\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -17,19 +17,16 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(produces = "application/json", consumes = "application/json")
-    public ResponseEntity<?> getUsers(){
-        return ResponseEntity.status(HttpStatus.OK).body("Hi");
-    }
-
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody UserDto userDto) {
         try {
             User user = userService.createUser(userDto);
             return ResponseEntity.ok(user);
         } catch (EmailAlreadyExistsException e) {
+            System.out.println(e);
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("El correo ya está registrado");
         } catch (InvalidDataException e) {
+            System.out.println(e);
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Datos inválidos");
         }
     }

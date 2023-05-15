@@ -24,7 +24,7 @@ public class UserService {
             throw new EmailAlreadyExistsException();
         }
 
-        if (!isValidEmail(userDto.getEmail()) ){ //|| !isValidPassword(userDto.getPassword())) {
+        if (!isValidEmail(userDto.getEmail()) || !isValidPassword(userDto.getPassword())) {
             throw new InvalidDataException();
         }
 
@@ -39,7 +39,9 @@ public class UserService {
         user.setToken(tokenService.generateToken(user));
         user.setActive(true);
 
-        return userRepository.save(user);
+        User newUser= userRepository.save(user);
+        newUser.setPassword(null);
+        return newUser;
     }
 
     private boolean isValidEmail(String email) {
