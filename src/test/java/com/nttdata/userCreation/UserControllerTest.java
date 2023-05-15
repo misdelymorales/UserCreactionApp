@@ -42,7 +42,6 @@ public class UserControllerTest {
         user.setPassword("Misdjhjsdh88");
         user.setPhones(Collections.emptyList());
 
-
         when(userService.createUser(userDto)).thenReturn(user);
 
         ResponseEntity<?> response = userController.createUser(userDto);
