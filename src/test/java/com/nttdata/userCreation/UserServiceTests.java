@@ -43,14 +43,6 @@ public class UserServiceTests {
 
         when(userRepository.existsByEmail(userDto.getEmail())).thenReturn(false);
 
-        User savedUser = new User();
-        savedUser.setId(1L);
-        savedUser.setName("Misdely Morales");
-        savedUser.setEmail("misdely@email.com");
-        savedUser.setPassword("Misdjhjsdh88");
-        savedUser.setPhones(Collections.emptyList());
-
-
         User user = new User();
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
